@@ -1,0 +1,585 @@
+/* Cable List Styles - Modern Rack Style */
+.cable-manager {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cable-manager .manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cable-manager .manager-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cable-manager .header-icon {
+  color: inherit;
+}
+
+/* Buttons */
+.cable-manager .btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.cable-manager .btn-primary {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: white;
+}
+
+.cable-manager .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.cable-manager .btn-secondary {
+  background: #f8fafc;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.cable-manager .btn-secondary:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.cable-manager .btn-danger {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.cable-manager .btn-danger:hover {
+  background: #fee2e2;
+}
+
+/* Filter Bar */
+.cable-manager .filter-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.cable-manager .filter-search {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+}
+
+.cable-manager .filter-search svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.cable-manager .filter-search input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cable-manager .filter-search input:focus {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+.cable-manager select {
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  background: white;
+  min-width: 120px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cable-manager select:focus {
+  border-color: #0d9488;
+}
+
+/* Filter Tabs */
+.cable-manager .filter-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.cable-manager .filter-tabs button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  background: white;
+  color: #64748b;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cable-manager .filter-tabs button:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.cable-manager .filter-tabs button.active {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: white;
+  border-color: #0d9488;
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.25);
+}
+
+.cable-manager .filter-tabs .count-badge {
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 10px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.cable-manager .filter-tabs button.active .count-badge {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Stats */
+.cable-manager .stats-display {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.cable-manager .stat-item {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cable-manager .stat-item .stat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cable-manager .stat-item .stat-icon.total {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.cable-manager .stat-item .stat-icon.active {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.cable-manager .stat-item .stat-icon.inactive {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.cable-manager .stat-item .stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cable-manager .stat-item .stat-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+.cable-manager .stat-item .stat-label {
+  font-size: 10px;
+  color: #6b7280;
+}
+
+/* Export Button */
+.cable-manager .export-btn {
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.cable-manager .export-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* Cable Grid - Rack Style */
+.cable-manager .cables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Cable Card - Rack Style */
+.cable-manager .cable-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+.cable-manager .cable-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--card-color, #0d9488), var(--card-color-light, #14b8a6));
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.cable-manager .cable-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(13, 148, 136, 0.12);
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+.cable-manager .cable-card:hover::before {
+  opacity: 1;
+}
+
+.cable-manager .cable-card-content {
+  padding: 18px;
+}
+
+/* Cable Header */
+.cable-manager .cable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.cable-manager .cable-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cable-manager .cable-type-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+  background: linear-gradient(135deg, #0d9488, #0f766e);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Cable Body */
+.cable-manager .cable-body {
+  margin-bottom: 0;
+}
+
+.cable-manager .cable-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.cable-manager .cable-stat .color-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cable-manager .cable-route-info {
+  margin-bottom: 10px;
+}
+
+.cable-manager .cable-route-info > div {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.cable-manager .cable-ports-info {
+  font-size: 12px;
+  color: #3b82f6;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+}
+
+/* Card Actions */
+.cable-manager .card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+}
+
+.cable-manager .card-actions .btn {
+  flex: 1 1 auto;
+  justify-content: center;
+  min-width: 65px;
+  padding: 8px 10px;
+  font-size: 11px;
+}
+
+.cable-manager .card-actions .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Status Badge */
+.cable-manager .status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Form Container */
+.cable-manager .cable-form-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cable-manager .form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: white;
+}
+
+.cable-manager .form-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cable-manager .btn-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.cable-manager .btn-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Modal */
+.cable-manager .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.cable-manager .modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cable-manager .modal-content.large-modal {
+  max-width: 900px;
+}
+
+.cable-manager .close-modal-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f1f5f9;
+  border: none;
+  font-size: 20px;
+  color: #64748b;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.cable-manager .close-modal-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+/* Loading */
+.cable-manager .loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #94a3b8;
+  font-size: 14px;
+  background: white;
+  border-radius: 12px;
+}
+
+/* Empty State */
+.cable-manager .empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f1f5f9;
+}
+
+.cable-manager .empty-state h3 {
+  margin: 16px 0 8px 0;
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cable-manager .empty-state p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.cable-manager .add-btn-empty {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.cable-manager .add-btn-empty:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cable-manager .cables-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cable-manager .manager-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cable-manager .manager-header h2 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,151 @@
+.location-picker-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.location-picker-modal {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 900px;
+  height: 90vh;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.location-picker-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.location-picker-search {
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.location-picker-search form {
+  display: flex;
+  gap: 10px;
+}
+
+.location-picker-search input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.location-picker-search button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.location-picker-search button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.location-picker-search button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.location-picker-map {
+  flex: 1;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.location-picker-info {
+  padding: 12px 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.location-picker-info p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.location-picker-info .no-selection {
+  color: #999;
+  font-style: italic;
+}
+
+.location-picker-actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+  justify-content: flex-end;
+}
+
+.location-picker-actions button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-cancel {
+  background: #e9ecef;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background: #dee2e6;
+}
+
+.btn-confirm {
+  background: #28a745;
+  color: white;
+}
+
+.btn-confirm:hover:not(:disabled) {
+  background: #218838;
+}
+
+.btn-confirm:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

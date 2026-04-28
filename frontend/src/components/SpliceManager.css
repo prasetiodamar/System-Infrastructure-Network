@@ -1,0 +1,391 @@
+/* Splice Manager Styles - Compact */
+.splice-manager {
+  padding: 16px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.splice-manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.splice-manager-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.splice-manager-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Header Buttons */
+.splice-manager-header .add-splice-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.splice-manager-header .add-splice-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3);
+}
+
+/* Summary */
+.splice-summary {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  background-color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  min-width: 80px;
+}
+
+.summary-label {
+  font-size: 10px;
+  color: #6b7280;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Filter Section */
+.splice-manager .filter-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.splice-manager .filter-search {
+  position: relative;
+  flex: 1;
+  min-width: 180px;
+}
+
+.splice-manager .filter-search input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 12px;
+  outline: none;
+}
+
+.splice-manager .filter-search input:focus {
+  border-color: #0d9488;
+}
+
+.splice-manager select {
+  padding: 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  background: white;
+}
+
+/* Filter Buttons */
+.splice-manager .filter-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.splice-manager .filter-buttons button {
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  background: white;
+  color: #6b7280;
+  transition: all 0.15s;
+}
+
+.splice-manager .filter-buttons button:hover {
+  background: #f3f4f6;
+}
+
+.splice-manager .filter-buttons button.active {
+  background: #1f2937;
+  color: white;
+  border-color: #1f2937;
+}
+
+/* Export Buttons */
+.splice-manager .export-buttons {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.splice-manager .export-buttons button {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  color: white;
+}
+
+.splice-manager .export-buttons button.csv {
+  background: #22c55e;
+}
+
+.splice-manager .export-buttons button.json {
+  background: #6366f1;
+}
+
+/* Splice List */
+.splices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-splices {
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px dashed #d1d5db;
+}
+
+.no-splices p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Splice Card - Compact */
+.splice-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.splice-card:hover {
+  border-color: #0d9488;
+}
+
+.splice-connection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.splice-end {
+  flex: 1;
+  min-width: 0;
+}
+
+.splice-cable-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.splice-core-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.core-number {
+  font-weight: 500;
+  color: #374151;
+}
+
+.core-colors {
+  display: flex;
+  gap: 4px;
+}
+
+.color-badge {
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+/* Splice Details */
+.splice-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+  flex-wrap: wrap;
+}
+
+.splice-type {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.splice-date {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.splice-client {
+  font-size: 11px;
+  color: #7c3aed;
+  font-weight: 500;
+}
+
+.splice-details .actions {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.splice-details .actions button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.splice-details .actions .edit-btn {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.splice-details .actions .delete-btn {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.splice-details .actions .trace-btn {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+/* Form Modal */
+.splice-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+.splice-form h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 12px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0d9488;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.form-actions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-actions .cancel-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+
+.form-actions .submit-btn {
+  background: #0d9488;
+  border: none;
+  color: white;
+}

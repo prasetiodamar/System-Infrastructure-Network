@@ -1,0 +1,148 @@
+.map-navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-title {
+  padding: 12px 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.navbar-nav {
+  padding: 0 10px;
+  overflow-x: auto;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  gap: 5px;
+  overflow-x: auto;
+  justify-content: center;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.navbar-list::-webkit-scrollbar {
+  height: 4px;
+}
+
+.navbar-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navbar-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.navbar-item {
+  flex-shrink: 0;
+}
+
+.navbar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+  gap: 4px;
+}
+
+.navbar-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.navbar-link.active {
+  background: white;
+  color: #667eea;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.navbar-icon-svg {
+  flex-shrink: 0;
+}
+
+.navbar-label {
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .navbar-link {
+    padding: 8px 12px;
+    min-width: 70px;
+  }
+
+  .navbar-icon {
+    font-size: 18px;
+  }
+
+  .navbar-label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-title {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+
+  .navbar-link {
+    padding: 6px 10px;
+    min-width: 60px;
+  }
+
+  .navbar-icon {
+    font-size: 16px;
+  }
+
+  .navbar-label {
+    font-size: 9px;
+  }
+
+  .navbar-list {
+    gap: 4px;
+  }
+}

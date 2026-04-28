@@ -1,0 +1,264 @@
+.cable-manager {
+  padding: 20px;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.cable-manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cable-manager-header h2 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.cable-manager-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Summary - PortManager Style */
+.core-summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background-color: #f3f4f6;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  border-top: 3px solid #6b7280;
+}
+
+.summary-card.available {
+  background-color: #dcfce7;
+  border-top-color: #22c55e;
+}
+
+.summary-card.allocated {
+  background-color: #dbeafe;
+  border-top-color: #3b82f6;
+}
+
+.summary-card.spliced {
+  background-color: #fef3c7;
+  border-top-color: #f59e0b;
+}
+
+.summary-card.damaged {
+  background-color: #fee2e2;
+  border-top-color: #ef4444;
+}
+
+.summary-label {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Filters - PortManager Style */
+.core-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.filter-btn.active {
+  background-color: #1f2937;
+  color: white;
+}
+
+/* Cores Grid - 12 columns like PortManager */
+.cores-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 8px;
+}
+
+.core-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px 6px;
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s;
+  min-height: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.core-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tube Grouping */
+.cores-by-tube {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tube-group {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.tube-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tube-badge {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tube-info {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Cores Grid inside tube - responsive */
+.tube-group .cores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 8px;
+}
+
+.core-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.core-status {
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.core-client {
+  font-size: 11px;
+  color: #374151;
+  margin-bottom: 2px;
+  font-weight: 500;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.core-area {
+  font-size: 10px;
+  color: #6b7280;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .core-summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cores-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .core-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cores-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
